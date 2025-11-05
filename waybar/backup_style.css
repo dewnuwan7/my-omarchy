@@ -1,0 +1,61 @@
+@define-color accent_orange   #e65c5c;
+@define-color accent_green    #9ece6a;
+@define-color accent_blue     #7aa2f7;
+@define-color accent_critical #e65c5c;
+#waybar {
+  background-color: rgba(38, 38, 38, 0);
+  border-radius: 6px;
+}
+#battery.charging,
+#battery.plugged {
+  color: @accent_green;
+}
+#workspaces{
+  margin-left:10px
+}
+#custom-omarchy {
+  margin-right: 12px;
+}
+#battery.warning:not(.charging) {
+  color: @accent_orange;
+}
+#battery.critical:not(.charging) {
+  color: @accent_critical;
+}
+#pulseaudio.muted {
+  color: @accent_critical;
+}
+#network.disconnected {
+  color: @accent_critical;
+}
+#clock{padding-right: 10px;}
+tooltip {
+  border-radius: 30px;
+  border: 1px solid @inactive;
+  background-color: #000000;
+}
+tooltip label {
+  color: #ffffff;
+}
+/* Pills for left, center, right modules */
+.modules-left {
+  padding: 1px 10px;
+  background-color: rgba(46,52,64,0.9);
+  border-radius: 999px;
+}
+.modules-center > * {
+  padding: 1px 10px;
+  background-color: rgba(46,52,64,0.9);
+  border-radius: 999px;
+}
+.modules-right {
+  background-color: rgba(46,52,64,0.9);
+  border-radius: 999px;
+  padding: 1px 5px 1px 10px;
+}
+/* Hover effect for nice feedback */
+.modules-left > *:hover,
+.modules-center > *:hover,
+.modules-right > *:hover {
+  background-color: rgba(46, 52, 64, 0.8);
+}
